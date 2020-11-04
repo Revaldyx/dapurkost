@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Tes</title>
+	<link rel="stylesheet" type="text/css" href="\resources\rating\css\star-rating.css">
+	<link rel="stylesheet" type="text/css" href="\resources\rating\css\bootstrap.css">
+	<style type="text/css">
+		body{
+			/*border: 5px solid #d1d1d1;*/
+			font-size: 4;
+			background-color: : #f7e5e4;
+			width:350px;
+			padding:10px;
+		}
+		input, textarea{
+			padding: 10px;
+			border:3px solid #e6e6e6;
+			border-radius: 5px;
+			margin-bottom: 15px; 
+		}
+		input:focus, textarea:focus{
+			border:3px solid #5E4F4F;
+		}
+
+		textarea{
+			width:250px;
+		}
+	</style>
+</head>
+<body>
+	<img src="\resources\1.jpg" class="img-responsive">
+	<h2 class="text-center">Tumis kacang panjang</h2>
+	<p>  Bahan</p>
+	<ul>
+		<li>250 gram kacang panjang (siangi, potong sesuai selera)</li>
+		<li>Minyak goreng (secukupnya)</li>
+	</ul>
+	<p>  Bumbu (ulek kasar)</p>
+	<ul>
+		<li>7 siung bawang merah</li>
+		<li>4 siung bawang putih</li>
+		<li>7 buah cabai rawit</li>
+		<li>Garam (secukupnya)</li>
+		<li>Gula (secukupnya)</li>
+		<li>Kaldu ayam bubuk (secukupnya)</li>
+	</ul>
+	<p>Cara Membuat</p>
+	<ol>
+		<li>Siapkan semua bahan, panaskan minyak goreng lalu tumis bumbu yang telah diulek kasar hingga harum</li>
+		<li>Masukkan kacang panjang, aduk rata agar bumbu tercampur.</li>
+		<li>Tambahkan sedikit air dan masak kacang panjang hingga benar-benar matang dan empuk. </li>
+		<li>Jika air sudah asat dan tumis kacang panjang matang, koreksi rasa. </li>
+		<li>Tambahkan garam, gula atau kaldu ayam bubuk jika rasanya kurang sedap</li>
+		<li>Segera angkat tumis kacang panjang yang telah matang</li>
+	</ol>
+	<p>Sajikan sayur tumis ini selagi masih hangat bersama nasi putih hangat dan taburan bawang merah goreng. Resep yang sangat mudah bukan? Selamat mencoba resep ini dan semoga keluarga di rumah suka. Semoga resep ini bermanfaat.</p><br>
+	<form id="formKomentar">
+		<div>
+			<p>Silakan komen di bawah...</p>
+		</div>
+		<div>
+			<input type="text" name="nama" placeholder="Nama" />
+		</div>
+		<div>
+			<textarea name="komentar" rows="5" placeholder="Komentar"></textarea>
+		</div>
+		<div>
+			<p>
+				<input id="rating-input" type="text" title=""/>
+			</p>
+		</div>
+		<script type="text/javascript" src="\resources\rating\js\jquery.min.js"></script>
+		<script type="text/javascript" src="\resources\rating\js\star-rating.js"></script>
+		<script type="text/javascript" src="\resources\rating\js\bootstrap.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				var $inp = $('#rating-input');
+
+		//$inp.attr('value','4');
+		
+		$inp.rating({
+			min: 0,
+			max: 5,
+			step: 1,
+			size: 'sm',
+			showClear: false
+		});
+		$inp.on('rating.change', function () {
+		});
+	});
+</script>
+	<button type="submit" class="btn btn-outline-primary">Submit</button>
+</form>
+</body>
+</html>
